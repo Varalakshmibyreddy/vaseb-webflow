@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        
+    }
+    .container{
+        width: 100%;
+        background-color: rgb(232, 236, 236);
+    }
+        .nav{
+    height: 70px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+.nav ul li{
+    list-style-type: none;
+    display: inline;
+    padding-left: 30px;
+    left: 10px;
+}
+.nav ul li a{
+    display: inline;
+    text-decoration:none;
+}
+.contact{
+    height: 700px;
+    width: 100%;
+    
+}
+.contact1{
+    height: 100px;
+    width: 100%;
+}
+
+.form{
+    height: 500px;
+    width: 55%;
+    padding-left: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+column-gap: 90px;
+}
+.form .input-box details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+ .form .input-box input{
+ height: 50px;
+ width: 100%;
+ outline: none;
+ border: none;
+ 
+}
+.form .input-box textarea{
+    border: 0;
+    border-bottom: 1px gray solid;
+    padding-top: 10px;
+    
+}
+ hr{
+    width: 130%;
+}
+.merge{
+    display: flex;
+    column-gap: 30px;
+}
+
+
+
+.connect{
+    height: 500px;
+    width: 40%;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.follow{
+    display: flex;
+    column-gap: 30px;
+    margin-top: 35px;
+
+}
+.begin{
+    height: 400px;
+    width: 100%;
+    background-color: rgb(240, 226, 228);
+    display: flex;
+   
+    
+    
+}
+.begin1{
+    height: 400px;
+    width: 50%;
+    padding-left:50px;
+    align-content: center;
+}
+.begin1 p{
+    font-size: 20px;
+}
+.begin2{
+    height: 400px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+.begin2a, .begin2b, .begin2c, .begin2d{
+    height: 200px;
+    width: 48%;
+    text-align: center;
+    align-content: center;
+}
+.begin2 p{
+    margin-top: 10px;
+}
+.begin2a img , .begin2d img{
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.begin1 button{
+    margin-top:50px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    
+}
+.faq{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    
+}
+.faq1, .faq2{
+    width: 50%;
+}
+.faq2 h6{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    
+}
+.faq2 h6 i{
+    float: right;
+}
+.browse{
+    height: 650px;
+    width: 100%;
+    background: url(background1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+    color: rgb(45, 54, 66);
+}
+.browse h1{
+    padding-top: 70px;
+}
+.browse p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+    </style>
+</head>
+<body>
+<div class="conatiner">
+<div class="nav">
+    <ul>
+        <li><a style="color: black; font-size: 30px;text-align: center;" href="#">Vaseb</a></li>
+        <li><a style="color: black; font-size: 15px; padding-top: 20px; margin-left: 230px;" href="aboutus.html">About Us</a></li>
+        <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Categories</a></li>
+        <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Shop</a></li>
+        <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Pages</a></li>
+        <li><a style="color: black; font-size: 15px; padding: 20px;" href="#">Contact</a></li> 
+        <i style="font-size: 15px; margin-left: 150px;" class="fa-solid fa-magnifying-glass"></i>
+        <i style="font-size: 20px; margin-left: 50px;" class="fa-regular fa-user"></i>
+        <li><a style="color: black; font-size: 15px;" href="#">Cart(0)</a></li>
+
+    </ul>
+</div>
+<div class="contact">
+    <div class="contact1">
+        <i class="fa-solid fa-chair" style="margin-left: 35px;"></i> Get in Touch
+        <h3 style="font-size: 27px; margin-bottom: 50px; margin-left: 35px;">Contact Us</h3>
+    </div>
+    <div class="merge">
+    <div class="form">
+        <div class="input-box">
+            <span class="details">First name*</span>
+            <input type="text" placeholder="Enter your first name" required><hr>
+        </div>
+
+        <div class="input-box">
+            <span class="details">Last name</span>
+            <input type="text" placeholder="Enter your last name"><hr>
+        </div>
+
+        <div class="input-box">
+            <span class="details">email adress</span>
+            <input type="email" placeholder="Enter your email address" required><hr>
+        </div>
+
+        <div class="input-box">
+            <span class="details">Phone number</span>
+            <input type="tel" placeholder="Enter your phone number"><hr>
+        </div>
+
+        <div class="input-box">
+            <span class="details">Write your message here*</span>
+            <textarea id="message" name="message" cols="88" rows="5" placeholder="Type Message..." required></textarea>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="terms" name="terms">
+            <span class="details"> I here by agree to the <a href="#">Terms & Conditions</a> of Vaseb.</span>
+            <input type="button" value="Submit Now" style="margin-left: 100px; border-radius: 20px; padding: 10px 20px;">
+        </div>
+    </div>
+    <div class="connect">
+        <h4 style="font-size: 20px;">Let's Connect</h4><br>
+        <p style="font-size: 20px;">We're here to help! Reach out to us via phone, email, or visit us in person at our showroom.</p><br><br>
+<img src="form.jpg">
+  <div class="follow">
+    <p> Follow us</p>
+    <i class="fa-brands fa-x-twitter"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-brands fa-instagram"></i>
+</div>
+    </div>
+    </div>
+</div>
+
+<div class="begin">
+    <div class="begin1">
+        <h3>Let's begin connect with vaseb!</h3><br>
+
+        <p>Are you ready to turn your home decor dreams into reality?We're here to help you every step of the way.</p>
+    <button>Shop Now</button>
+    </div>
+    <div class="begin2">
+        <div class="begin2a" style="background-color:rgb(24, 1, 1);">
+            <img src="mail.svg" height="40px" width="40px" >
+            <h4>Send us a message</h4>
+<p>info@example.com</p>
+<p>(480) 555-0103</p>
+        </div>
+        <div class="begin2b">
+            <img src="begin1.jpg" height="200px" width="310px">
+        </div>
+        <div class="begin2c">
+            <img src="begin2.jpg" height="200px" width="310px">
+        </div>
+        <div class="begin2d" style="background-color: black;">
+            <img src="address.svg" height="40px" width="40px" >
+
+           <h4> Address</h4>
+<p>4517 Washington Ave.</p>
+<p> Manchester, Kentucky 39495</p>
+        </div>
+
+    </div>
+</div>
+<div class="faq">
+    <div class="faq1">
+        <i class="fa-solid fa-chair" style="margin-left: 35px;"></i> FAQ's<br><br>
+    <h3 style="font-size: 27px; margin-bottom: 50px; margin-left: 35px;">Frequently Asked Questions</h3>
+    
+    </div>
+    <div class="faq2">
+        <h6>What payment methods do you accept? <i class="fa-thin fa-plus"></i></h6><br><hr>
+        <h6>How long will it takes to receive my order? <i class="fa-thin fa-plus"></i></h6><br><hr>
+        <h6>Do you offer international shipping? <i class="fa-thin fa-plus"></i></h6><br><hr>
+        <h6>what is your return policy? <i class="fa-thin fa-plus"></i></h6><br><hr>
+        <h6>Do you offer assembly services for furniture? <i class="fa-thin fa-plus"></i></h6><br><hr>
+        <h6>Are you products covered by a warranty? <i class="fa-thin fa-plus"></i></h6><br><hr>
+    </div>
+</div>
+<div class="browse">
+    <h1>Browse modern today!</h1>
+    <p>Dive into our curated collection of contemporary furniture and decor,<br>
+         meticulously designed to elevate your living spaces.</p>
+</div>
+</div>
+</body>
+</html
