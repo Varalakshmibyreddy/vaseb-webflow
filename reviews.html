@@ -77,7 +77,8 @@
         justify-content: space-around;
        }
        .back{
-            background:url(./images/c\ image9.jpg);
+            background:url(images/furniture\ 1.jpg);
+            background-size: cover;
             height:500px;
             width:97%;
             border-radius:8px;
@@ -138,13 +139,80 @@ h5{
     font-size: 18px;
 }
 li{
-    list-style: none;
+    list-style-type: none;
 }
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: gainsboro;
+}
+ul{
+    list-style-type: none;
+    background-color:gainsboro;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+ul li ul.dropdown{
+    display: block;
+    background: gainsboro;
+    margin: 2px 0px;
+}
+ul li ul.dropdown{
+    width: auto;
+    background-color: plum;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: peru;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+ul li ul.Dropdown li{
+    display: block;
+    background: #ffff;
+    margin:  2px 0px;
+}
+
 
        </style>
 
 </head>
 <body>
+  <div class="nav">
+    <ul>
+        <li><a style="margin-right: 200px; font-size: 30px;" href="#">Vasab</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="catagories.html">Categories</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#">pages <i style="font-size: 13px;" class="fa-solid fa-chevron-up"></i></a>
+            <ul class="dropdown">
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="faq.html">FAQ's</a></li>
+            </ul>
+        </li>
+        <li><a href="Contact.html">Contact</a></li>
+        <i style="margin-left: 50px; cursor: pointer;" class="fa-solid fa-magnifying-glass"></i>
+        <i style="margin: 10px; cursor: pointer;" class="fa-solid fa-user"></i>
+        <li><a href="login.html">CART(0)</a></li>
+    </ul>
+</div>
+
  <div class="container">
      <span class="material-symbols-outlined">chair</span>
         <h4>Testimonial</h4>
@@ -158,7 +226,7 @@ li{
          anyone who wants to transform their<br>
           living space into a comfortable home.<p>
 <div class="sup">
-        <img src="images/men1.jpg" height="60px" width="60x">
+        <img src="images/1.avif" height="60px" width="60x">
            <div class="sup1">
               <h3>Albert Flores</h3>
                 <h4>New Jersey, USA</h4>
@@ -173,7 +241,7 @@ li{
             Sofa from Modern Living, and it has<br>
             completely transformed my living room.<p>
  <div class="sup">
-     <img src="images/men2.jpg" height="60px" width="60x">
+     <img src="images/2.avif" height="60px" width="60x">
          <div class="sup1">
           <h3>Devon Lane</h3>
           <h4>Florida, US</h4>
@@ -186,7 +254,7 @@ li{
         help you turn your house into a home,<br>
          look no further than this company.<p>
   <div class="sup">
-          <img src="images/men3.jpg" height="60px" width="60x">
+          <img src="images/3.avif" height="60px" width="60x">
             <div class="sup1">
              <h3>Bessie Cooper</h3>
             <h4>Texas, US</h4>
@@ -202,7 +270,7 @@ li{
               Dining Table, and I'm very happy with it.<br>
               it's a great addition to my dining room.<p>
  <div class="sup">
-     <img src="images/men4.jpg" height="60px" width="60x">
+     <img src="images/1.avif" height="60px" width="60x">
          <div class="sup1">
            <h3>Courtney Henry</h3>
            <h4>california,USA</h4>
@@ -217,7 +285,7 @@ li{
           wireless charging, and it has been a <br>
           fantastic addition to my home office.<p>
 <div class="sup">
-    <img src="images/men5.jpg" height="60px" width="60x">
+    <img src="images/3.avif" height="60px" width="60x">
           <div class="sup1">
              <h3>Jenny Wilson</h3>
              <h4>Toronto, US</h4>
@@ -231,7 +299,7 @@ li{
              Chair from Vaseb, and it's been a game<br>
              -changer for my home office.<p>
  <div class="sup">
-       <img src="images/men6.jpg" height="60px" width="60x">
+       <img src="images/4.avif" height="60px" width="60x">
           <div class="sup1">
             <h3>Ralph Edwards</h3>
             <h4>Grorgia, US</h4>
@@ -245,7 +313,7 @@ li{
       <h1>Browse modern today!</h1>
       <h3>Dive into curated collection of contemporaray furniture and decor,<br>
         meticulousiy designed to elevate your liveng spaces.</h3>
-      <video src="images/c video.mp4" height="150" width="200" controls></video>
+      <video src="vedio/3555398-hd_1920_1080_30fps.mp4" height="150" width="200" controls></video>
       <h3>watch the video</h3>
 </div>
    
@@ -256,13 +324,13 @@ li{
        <div class="footer-col">
          <h5>COMPANY</h5>
          <ul>
-           <li><a href="#">About Us</a></li>
-           <li><a href="#">Shops</a></li>
-           <li><a href="#">Blogs</a></li>
-           <li><a href="#">Reviews</a></li>
-           <li><a href="#">Stores</a></li>
-           <li><a href="#">Contact Us</a></li>
-           <li><a href="#">FAQ</a></li>
+           <li><a href="about us.html">About Us</a></li>
+           <li><a href="shop.html">Shops</a></li>
+           <li><a href="blogs.html">Blogs</a></li>
+           <li><a href="reviews.html">Reviews</a></li>
+           <li><a href="shop.html">Shop</a></li>
+           <li><a href="Contact.html">Contact Us</a></li>
+           <li><a href="faq.html">FAQ</a></li>
          </ul>
        </div>
         <div class="footer-col">

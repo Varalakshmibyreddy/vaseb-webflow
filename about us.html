@@ -15,27 +15,58 @@
         font-family: sans-serif;
         
     }
-    .container{
+.container{
         width: 100%;
         background-color: rgb(232, 236, 236);
     }
     .nav{
     height: 70px;
     width: 100%;
-    align-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: whitesmoke;
+    background-color: gainsboro;
 }
-.nav ul li{
+ul{
     list-style-type: none;
-    display: inline;
-    padding-left: 30px;
-    left: 10px;
+    background-color:gainsboro;
+    text-align: center;
 }
-.nav ul li a{
-    display: inline;
-    text-decoration:none;
-}.chair{
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+ul li ul.dropdown{
+    display: block;
+    background: gainsboro;
+    margin: 2px 0px;
+}
+ul li ul.dropdown{
+    width: auto;
+    background-color: plum;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: peru;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+ul li ul.Dropdown li{
+    display: block;
+    background: #ffff;
+    margin:  2px 0px;
+}
+
+.chair{
     margin-top: 30px;
     margin-left: 40px;
 }
@@ -305,7 +336,7 @@ color: white;
 .browse{
     height: 650px;
     width: 100%;
-    background: url(images/furniture.jpg);
+    background: url(images/furniture\ 1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -320,6 +351,38 @@ color: white;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.footer{
+    height: 500px;
+    width: 100%;
+    background-color: gainsboro;
+}
+.content{
+    max-width: 100%;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer{
+    padding: 50px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    text-align: center;
+}
+.footer-col h5{
+    font-size: 18px;
+}
+ul li a{
+   text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+
 
 
 
@@ -328,19 +391,27 @@ color: white;
 </head>
 <body>
     <div class="container">
-        </html><div class="nav">
+        <div class="nav">
             <ul>
-                <li><a style="color: black; font-size: 30px;text-align: center;" href="#">Vaseb</a></li>
-                <li><a style="color: black; font-size: 15px; padding-top: 20px; margin-left: 230px;" href="#">About Us</a></li>
-                <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Categories</a></li>
-                <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Shop</a></li>
-                <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Pages</a></li>
-                <li><a style="color: black; font-size: 15px; padding: 20px;" href="#">Contact</a></li> 
-                <i style="font-size: 15px; margin-left: 150px;" class="fa-solid fa-magnifying-glass"></i>
-                <i style="font-size: 20px; margin-left: 50px;" class="fa-regular fa-user"></i>
-                <li><a style="color: black; font-size: 15px;" href="#">Cart(0)</a></li>
-             </ul>
+                <li><a style="margin-right: 200px; font-size: 30px;" href="vaseb.html">Vasab</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="catagories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">pages <i style="font-size: 13px;" class="fa-solid fa-chevron-up"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="faq.html">FAQ's</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+                <i style="margin-left: 50px; cursor: pointer;" class="fa-solid fa-magnifying-glass"></i>
+                <i style="margin: 10px; cursor: pointer;" class="fa-solid fa-user"></i>
+                <li><a href="login.html">CART(0)</a></li>
+            </ul>
         </div>
+
+
     <div class="chair"><i class="fa-solid fa-chair"></i> About Us
     <h1>Our Story</h1>
 </div>
@@ -349,16 +420,16 @@ color: white;
         <p>At Vaseb, we believe that your home should be a </p>
             <p> reflection of your personal style and a sanctuary of</p>
             <p> comfort and functionality.</p><br>
-        <img src="aboutus1.png" height="390px" width="400px">
+        <img src="images/owners.jpg" height="390px" width="400px">
     </div>
     <div class="box2">
-        <img src="aboutus2.jpeg" height="400px" width="400px">
+        <img src="images/pic2.jpg" height="400px" width="400px">
         <p><i class="fa-solid fa-circle-check"></i>Easy returns and post-purchase support.</p>
             <p><i class="fa-solid fa-circle-check"></i> Encouragement to explore collections and trends.</p>
             <p><i class="fa-solid fa-circle-check"></i>Emphasis on quality and craftsmanship.</p>
     </div>
     <div class="box3">
-        <img src="aboutus3" height="500px" width="400px">
+        <img src="images/pic2.b.jpg" height="500px" width="400px">
     </div>
 </div>
 <div class="tab">
@@ -383,13 +454,13 @@ color: white;
     </div>
 </div>
 <div class="vision">
-    <img src="aboutus4" height="400px" width="600px">
+    <img src="images/home1.jpg" height="400px" width="600px">
     <div class="vision2">
         <h4>Our Vision & Mission</h4>
         <p>To curate and deliver exceptional products that embody the essence of contemporary living, enriching homes with sophistication, comfort, sustainability, and intelligent design.</p>
         <br>
         <p>To redefine modern living by seamlessly blending innovation, style, & functionality, creating spaces that inspire and elevate the human experience.</p>
-        <button>Explore More</button>
+        <button><a href="catagories.html">Explore More</a></button>
     </div>
 </div>
 <div class="costomizable">
@@ -398,42 +469,42 @@ color: white;
     <p>Customizable</p><br>
     <h4>Where modern living begins!</h4><br>
     <p>Shop now for stylish furniture, and smart home solutions.</p><br>
-    <button>Shop Now</button>
+    <button><a href="shop.html">Shop Now</a></button>
         </div>
         <div class="cost1B" style="align-content: center;">
-        <img src="aboutus5.jpeg" height="300px" width="300px">
+        <img src="images/about.avif" height="300px" width="300px">
         </div>
     </div>
         <div class="cost2">
-            <img src="aboutus6" height="400px" width="600px">
+            <img src="images/about1.jpg" height="400px" width="600px">
         </div>
     </div>
 <div class="explore">
     <p style="font-size: 24px;">Explore our sale! Up to 50% off select furniture.</p>
     <p style="font-size: 13px; color: rgb(41, 39, 39);">Discover your style with our exclusive sale!</p>
-    <button>Collection</button>
+    <button><a href="catagories.html">Collection</a></button>
 </div>
 <div class="member">
     <i class="fa-solid fa-chair" style="margin-left: 35px;"></i> Members
     <h3 style="font-size: 27px; margin-bottom: 50px; margin-left: 35px;">Meet Our Team</h3>
     <div class="memberA">
     <div class="member1">
-        <img src="aboutus7" height="340px" width="300px">
+        <img src="images/1.avif" height="340px" width="300px">
         <h6>Esther Howards</h6>
         <p>Founder&CEO</p>
     </div>
     <div class="member2">
-        <img src="aboutus8" height="340px" width="300px">
+        <img src="images/2.avif" height="340px" width="300px">
         <h6>Ronald Richard</h6>
         <p>Team Leader</p>
 </div>
     <div class="member3">
-        <img src="aboutus9" height="340px" width="300px">
+        <img src="images/3.avif" height="340px" width="300px">
         <h6>Bessie Cooper</h6>
         <p>Sales Executive</p>
 </div>
     <div class="member4">
-        <img src="aboutus10.jpg" height="340px" width="300px">
+        <img src="images/4.avif" height="340px" width="300px">
         <h6>Cameron Williamson</h6>
         <p>Marketing Manager</p>
     </div>
@@ -528,7 +599,59 @@ color: white;
     <h1>Browse modern today!</h1>
     <p>Dive into our curated collection of contemporary furniture and decor,<br>
          meticulously designed to elevate your living spaces.</p>
+         <video src="vedio/3555398-hd_1920_1080_30fps.mp4" height="200px" width="300px" controls></video>
+         <p>watch the vedio</p>
 </div>
+<footer class="footer">
+    <div class="content">
+      <div class="row">
+        <div class="footer-col">
+          <h5>COMPANY</h5>
+          <ul>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="shop.html">Shops</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+         <div class="footer-col">
+          <h5>RESOURCES</h5>
+          <ul>
+            <li><a href="#">Slide guide</a></li>
+            <li><a href="#">Privacey Policey</a></li>
+            <li><a href="#">Tearms & conditions</a></li>
+            <li><a href="#">Return policey</a></li>
+            <li><a href="#">Licencing</a></li>
+            <li><a href="#">Change Vlogs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>CONNECTED</h5>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i>Instagram</a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i>Instagram</a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i>Instagram</a></li>
+          </ul>
+        </div>
+      <div class="footer-col">
+        <h5>Join List</h5>
+        <ul>
+          <li><a href="#">Stay up-to-date with the <br>
+            latest news, and design.</a></li>
+          <li><a href="#">Email Address</a></li>       
+          <li><a href="#">Enter your Email</a></li>
+          <li><a href="#"> I agree to receive promotional<br>
+             emails from Modern Living.</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </footer>
+
 </div>
 </body>
 </html>

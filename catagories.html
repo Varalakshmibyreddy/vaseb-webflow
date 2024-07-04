@@ -3,191 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>Image Popup Example</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-        
-    }
-    .container{
-        width: 100%;
-        background-color: rgb(232, 236, 236);
-    }
-        .nav{
-    height: 70px;
+<style>
+    * {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #f0f0f0;
     width: 100%;
-    background-color: whitesmoke;
-}
-.nav ul li{
-    list-style-type: none;
-    display: inline;
-    padding-left: 30px;
-    left: 10px;
-}
-.nav ul li a{
-    display: inline;
-    text-decoration:none;
-}
-.chair{
-    margin-top: 40px;
-    padding-left: 30px;
-}
-.categories{
-    margin-top: 50px;
-    justify-content: center;
-   margin-left: auto;
-   margin-right: auto;
-   display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    column-gap: 20px;
-    row-gap: 50px;
-}
-.parent{
-    width: 18%;
-    height: 280px;
-    overflow:hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
-    border-radius: 10px;
-}
-.child{
-height: 100%;
-width: 100%;
-background-size: cover;
-background-position: center;
-transition: all 1s;
-}
-.bg-one{
-    background-image: url(clock.jpg);
-}
-.bg-two{
-    background-image: url(sofa.jpg);
-}
-.bg-three{
-    background-image: url(table.jpg);
-}
-.bg-four{
-    background-image: url(chair.jpg);
-}
-.bg-five{
-    background-image: url(lamp.jpg);
-}
-.bg-six{
-    background-image: url(vaseb.jpg);
-}
-.bg-seven{
-    background-image: url(bookcase.jpg);
-}
-.bg-eight{
-    background-image: url(wardrobes.jpg);
-}
-.bg-nine{
-    background-image: url(beds.jpg);
-}
-.bg-ten{
-    background-image: url(desk.jpg);
-}
-.parent:hover .child{
-    transform:scale(1.1);
-}
+    height: 100vh;
     
-.browse{
-    height: 650px;
+}
+.nav{
+        height: 70px;
+        width: 100%;
+        background-color: gainsboro;
+    }
+   .nav ul{
+        list-style-type: none;
+        background-color:gainsboro;
+        text-align: center;
+    }
+    
+   .nav ul li{
+        display: inline-block;
+        position: relative;
+    }
+   .nav ul li a{
+        display: block;
+        padding: 20px 25px;
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        text-align: center;
+    }
+   .nav ul li ul.dropdown{
+        display: block;
+        background: gainsboro;
+        margin: 2px 0px;
+    }
+    .nav ul li ul.dropdown{
+        width: auto;
+        background-color: plum;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: peru;
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+    }
+    ul li ul.Dropdown li{
+        display: block;
+        background: #ffff;
+        margin:  2px 0px;
+    }
+.chair{
+    padding-top:30px ;
+    height: 100px;
     width: 100%;
-    margin-top: 30px;
-    background: url(background1);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.image-container {
+    height: 250px;
+    width: 240px;
+    
+    background-color: rgb(241, 235, 236);
     align-content: center;
-    color: rgb(45, 54, 66);
-}
-.browse h1{
-    padding-top: 70px;
-}
-.browse p{
-    font-size: 20px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+    }
+
+.image-container p{
+    font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.zoom {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.popup {
+    height: 210px;
+    width: 300px;
+    position: absolute;
+    bottom: 100%;
+    left: 70%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+.popupimage{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.popupimage h{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+.popupimage p{
+font-family: 'Courier New', Courier, monospace;
+font-size: 15px;
+}
+.section5{
+        height: 800px;
+        width: 100%;
+        background-color: grey; 
+        color: rgb(247, 247, 250);
+        margin-top: 50px;
+        background-image: url(images/furniture\ 1.jpg);
+        background-size: cover;
+    }
+    .section5 h1{
+        padding-top: 320px;
+    }
+    .section5 h1,h2,h6{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .section5 video{
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 550px;
+    }
+    
+
+
+
 </style>
 </head>
 <body>
-<div class="conatiner">
-<div class="nav">
-    <ul>
-        <li><a style="color: black; font-size: 30px;text-align: center;" href="#">Vaseb</a></li>
-        <li><a style="color: black; font-size: 15px; padding-top: 20px; margin-left: 230px;" href="#">About Us</a></li>
-        <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Categories</a></li>
-        <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Shop</a></li>
-        <li><a style="color: black; font-size: 15px; padding-top: 20px;" href="#">Pages</a></li>
-        <li><a style="color: black; font-size: 15px; padding: 20px;" href="#">Contact</a></li> 
-        <i style="font-size: 15px; margin-left: 150px;" class="fa-solid fa-magnifying-glass"></i>
-        <i style="font-size: 20px; margin-left: 50px;" class="fa-regular fa-user"></i>
-        <li><a style="color: black; font-size: 15px;" href="#">Cart(0)</a></li>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li><a style="margin-right: 200px; font-size: 30px;" href="#">Vasab</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">pages <i style="font-size: 13px;" class="fa-solid fa-chevron-up"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <i style="margin-left: 50px; cursor: pointer;" class="fa-solid fa-magnifying-glass"></i>
+                <i style="margin: 10px; cursor: pointer;" class="fa-solid fa-user"></i>
+                <li><a href="#">CART(0)</a></li>
+            </ul>
+        </div>
+        <div class="chair"><i class="fa-solid fa-chair"></i> Explore<br><br>
+            <h1>Our Categories</h1>
+        </div>
+        <div class="image-container">
+            <img src="images/clock.jpg"  alt="Sample Image" class="zoom"><br><br>
+            <p>Clocks</p>
+            <div class="popup">
 
-    </ul>
-</div>
-</div>
+                <span class="popupimage">
+                    <div class="img1">
+                    <img src="Images/clock2.jpg" height="120px" width="120px" ><br>
+                    <h>Modern wall Clock</h>
+                    <p>$450.20USD</p><br>
+                    </div>
+                    <div class="img2">
+                    <img src="Images/clock3.jpg" height="120px" width="120px"><br>
+                    <h>Modern Desk Clock</h>
+                    <p>$499.50USD</p>
+                </div>
+                </span>
 
-<div class="chair"><i class="fa-solid fa-chair"></i> Explore<br><br>
-    <h1 style="font-size: 45px;">Our Categories</h1>
-</div>
+                </div>
+            </div>
+            
 
-<div class="categories">
-    <div class="parent">
-        <div class="child bg-one"></div>
+            <div class="image-container">
+                <img src="images/sofa.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                <p>Sofas</p>
+                 <div class="popup">
+
+                <span class="popupimage">
+                    <div class="img1">
+                        <img src="Images/vaseb7.jpg" height="120px" width="120px" ><br>
+                        <h>Selectional Sofa</h>
+                        <p>$510.20USD</p><br>
+                        </div>
+                        <div class="img2">
+                        <img src="Images/vaseb14.jpg" height="120px" width="120px"><br>
+                        <h>Chesterfield sofa</h>
+                        <p>$899.50USD</p>
+                    </div>
+                </span>
+
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="images/table.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                    <p>Tables</p>
+                    <div class="popup">
+
+                        <span class="popupimage">
+                            <div class="img1">
+                                <img src="Images/table2.jpg" height="120px" width="120px" ><br>
+                                <h>Modern wall Clock</h>
+                                <p>$99.20USD</p><br>
+                                </div>
+                                <div class="img2">
+                                <img src="Images/table3.jpg" height="120px" width="120px"><br>
+                                <h>Modern Desk Clock</h>
+                                <p>$280.00USD</p>
+                            </div>
+                        </span>
+
+                        </div>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="images/chair.jpg"  alt="Sample Image" class="zoom"><br><br>
+                        <p>Chairs</p>
+                        <div class="popup">
+
+                            <span class="popupimage">
+                                <div class="img1">
+                                    <img src="Images/vaseb2.jpg" height="120px" width="120px" ><br>
+                                    <h> Velvet Accent Chair </h>
+                                    <p>$399.00USD</p><br>
+                                    </div>
+                                    <div class="img2">
+                                    <img src="Images/vaseb5.jpg" height="120px" width="120px"><br>
+                                    <h> Recliner Chair</h>
+                                    <p>$399.99USD</p>
+                                </div>
+                            </span>
+
+                            </div>
+                        </div>
+
+                        <div class="image-container">
+                            <img src="images/lamp.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                            <p>Lamps</p>
+                            <div class="popup">
+
+                                <span class="popupimage">
+                                    <div class="img1">
+                                        <img src="Images/vaseb4.jpg" height="120px" width="120px" ><br>
+                                        <h>Elegant Table Lamp</h>
+                                        <p>$79.99USD</p><br>
+                                        </div>
+                                        <div class="img2">
+                                        <img src="Images/clock3.jpg" height="120px" width="120px"><br>
+                                        <h>Brass Floor Lamp</h>
+                                        <p>$490.30USD</p>
+                                    </div>
+                                </span>
+
+                                </div>
+                            </div>
+
+                            <div class="image-container">
+                                <img src="images/vaseb.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                                <p>vases</p>
+                                <div class="popup">
+
+                                    <span class="popupimage">
+                                        <div class="img1">
+                                        <img src="Images/vases2.jpg" height="120px" width="120px" ><br>
+                                        <h>Wooden Vase</h>
+                                        <p>$69.00USD</p><br>
+                                        </div>
+                                        <div class="img2">
+                                        <img src="Images/vases3.jpg" height="120px" width="120px"><br>
+                                        <h>Marble Vase</h>
+                                        <p>$299.99USD</p>
+                                    </div>
+                                </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="image-container">
+                                    <img src="images/bookcase.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                                    <p>Bookscases</p>
+                                    <div class="popup">
+
+                                        <span class="popupimage"><div class="img1">
+                                            <img src="Images/vaseb5.jpg" height="120px" width="120px" ><br>
+                                            <h>Metal Bookcase</h>
+                                            <p>$249.99USD</p><br>
+                                            </div>
+                                            <div class="img2">
+                                            <img src="Images/vaseb11.jpg" height="120px" width="120px"><br>
+                                            <h>BookShelf</h>
+                                            <p>$199.50USD</p>
+                                        </div>
+                                    </span>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="image-container">
+                                        <img src="images/wardrobes.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                                        <p>Wardrobes</p>
+                                        <div class="popup">
+
+                                            <span class="popupimage">
+                                                <div class="img1">
+                                                    <img src="Images/wardrobes2.jpg" height="120px" width="120px" ><br>
+                                                    <h>Console Table</h>
+                                                    <p>$169.00USD</p><br>
+                                                    </div>
+                                                    <div class="img2">
+                                                    <img src="Images/wardrobes3.jpg" height="120px" width="120px"><br>
+                                                    <h>Closet Wardrobe</h>
+                                                    <p>$899.99USD</p>
+                                                </div>
+                                            </span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <img src="images/section.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                                           <p>Beds</p>
+                                            <div class="popup">
+
+                                                <span class="popupimage">
+                                                    <div class="img1">
+                                                        <img src="Images/pic2.b.jpg" height="120px" width="120px" ><br>
+                                                        <h>Twin LoftBed</h>
+                                                        <p>$469.99USD</p><br>
+                                                        </div>
+                                                        <div class="img2">
+                                                        <img src="images/pic2.jpg" height="120px" width="120px"><br>
+                                                        <h>Wooden Chair</h>
+                                                        <p>$699.99USD</p>
+                                                    </div>
+                                                </span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <img src="images/desk.jpg"  alt="Sample Image"  class="zoom"><br><br>
+                                               <p>Desks</p>
+                                                <div class="popup">
+
+                                                    <span class="popupimage"><div class="img1">
+                                                        <img src="Images/vaseb3.jpg" height="120px" width="120px" ><br>
+                                                        <h>Study Desk</h>
+                                                        <p>$199.99USD</p><br>
+                                                        </div>
+                                                        <div class="img2">
+                                                        <img src="Images/desk2.jpg" height="120px" width="120px"><br>
+                                                        <h>Executive Desk</h>
+                                                        <p>$799.99USD</p>
+                                                    </div>
+                                                </span>
+
+                                                    </div>
+                                                </div>
+                                             
+                                                <div class="section5">
+                                                    <h1>Browse modern today</h1>
+                                                    <h2>Dive into our curated collection of contemporary furniture and decor,<br>
+                                                         meticulously designed to elevate your living spaces.</h2>
+                                                         <video src="vedio/3555398-hd_1920_1080_30fps.mp4" height="150px" width="200px" controls></video>
+                                                      <h6>watch video &nbsp;<i class="fa-solid fa-play"></i></h6>
+                                                </div>
+                                               
+
+        
+
     </div>
-
-    <div class="parent">
-        <div class="child bg-two"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-three"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-four"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-five"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-six"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-seven"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-eight"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-nine"></div>
-    </div>
-
-    <div class="parent">
-        <div class="child bg-ten"></div>
-    </div>
-</div>
-
-    <div class="browse">
-    <h1>Browse modern today!</h1>
-    <p>Dive into our curated collection of contemporary furniture and decor,<br>
-         meticulously designed to elevate your living spaces.</p>
-</div>
-
-</div>
 </body>
 </html>

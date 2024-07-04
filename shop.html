@@ -147,7 +147,8 @@
          margin-top:10px;
         }
         .back{
-            background:url(./images/c\ image9.jpg);
+            background:url(images/furniture\ 1.jpg);
+            background-size: cover;
             height:500px;
             width:97%;
             margin-left:10px;
@@ -194,6 +195,9 @@
 .footer{
     padding: 50px 0;
 }
+ul li a{
+    text-decoration: none;
+}
 .footer-col{
     width:22%;
     padding: 0 15px;
@@ -210,12 +214,77 @@ li{
     list-style: none;
 }
 
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: gainsboro;
+}
+ul{
+    list-style-type: none;
+    background-color:gainsboro;
+    text-align: center;
+}
 
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+ul li ul.dropdown{
+    display: block;
+    background: gainsboro;
+    margin: 2px 0px;
+}
+ul li ul.dropdown{
+    width: auto;
+    background-color: plum;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: peru;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+ul li ul.Dropdown li{
+    display: block;
+    background: #ffff;
+    margin:  2px 0px;
+}
         
     </style>
 </head>
 <body>
- <div class="container">        
+ <div class="container">   
+    
+    <div class="nav">
+        <ul>
+            <li><a style="margin-right: 200px; font-size: 30px;" href="#">Vasab</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="catagories.html">Categories</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">pages <i style="font-size: 13px;" class="fa-solid fa-chevron-up"></i></a>
+                <ul class="dropdown">
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="faq.html">FAQ's</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+            <i style="margin-left: 50px; cursor: pointer;" class="fa-solid fa-magnifying-glass"></i>
+            <i style="margin: 10px; cursor: pointer;" class="fa-solid fa-user"></i>
+            <li><a href="login.html">CART(0)</a></li>
+        </ul>
+    </div>
         <span class="material-symbols-outlined"> chair</span>
        <h4> New Trending</h4>
        <p>Latest Products</p>
@@ -223,22 +292,22 @@ li{
 
     <div class="images">
         <div class="nav">
-          <img src="images/c image1.jpg" height="390px" width="300px">
+          <img src="images/study desk.jpg" height="390px" width="300px">
           <h3>Study Desk</h3>
           <h4>$ 199.99 USD</h4>
         </div>
      <div class="nav1">
-         <img src="images/c image2.jpg" height="390px" width="300px">
+         <img src="images/elegent.jpg" height="390px" width="300px">
          <h3>Elegant Table Lamp</h3>
          <h4>$ 79.99 USD</h4>
     </div>
       <div class="nav2">
-        <img src="images/c image3.jpg" height="390px" width="300px">
+        <img src="images/nova.jpg" height="390px" width="300px">
         <h3>Nova Sectional Sofa</h3>
         <h4>$ 510.00 USD</h4>
       </div>
      <div class="nav3">
-        <img src="images/c image4.jpg" height="390px" width="300px">
+        <img src="images/valvent.jpg" height="390px" width="300px">
         <h3>Velvet Accent chair</h3>
         <h4>$ 399.00 USD</h4>
     </div>
@@ -246,22 +315,22 @@ li{
 
     <div class="images1">
         <div class="sup">
-          <img src="images/c image5.jpg" height="390px" width="300px">
+          <img src="images/industrial.jpg" height="390px" width="300px">
           <h3>Industrial Metal Bookcase</h3>
           <h4>$ 249.99 USD</h4>
         </div>
      <div class="sup1">
-         <img src="images/c image6.jpg" height="390px" width="300px">
+         <img src="images/comfortable.jpg" height="390px" width="300px">
          <h3>Comfortable Recliner Chair</h3>
          <h4>$ 399.99 USD</h4>
     </div>
       <div class="sup2">
-        <img src="images/c image7.jpg" height="390px" width="300px">
+        <img src="images/modern.jpg" height="390px" width="300px">
         <h3>Modern Wall Clock</h3>
         <h4>$ 450.20 USD</h4>
       </div>
      <div class="sup3">
-        <img src="images/c image8.jpg" height="390px" width="300px">
+        <img src="images/rustic.jpg" height="390px" width="300px">
         <h3>Rustic Wood Console</h3>
         <h4>$ 169.00 USD</h4>
     </div>
@@ -272,7 +341,7 @@ li{
     <h3>Dive into curated collection of contemporaray furniture and decor,<br>
         meticulousiy designed to elevate your liveng spaces.
     </h3>
-    <video src="images/c video.mp4" height="150" width="200" controls></video>
+    <video src="vedio/3555398-hd_1920_1080_30fps.mp4" height="150" width="200" controls></video>
     <h3>watch the video</h3>
 
  </div>

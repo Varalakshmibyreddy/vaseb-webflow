@@ -159,7 +159,8 @@
         
         }
        .back{
-            background:url(./images/c\ image9.jpg);
+            background:url(images/section.jpg);
+            background-size: cover;
             height:500px;
             width:97%;
             margin-left:10px;
@@ -185,10 +186,10 @@
             margin-top:-20px;
             margin-left:530px;
         }
-    
 
-        .footer{
-    height: 400px;
+    
+ .footer{
+    height: 500px;
     width: 100%;
     background-color: gainsboro;
     margin-top:100px;
@@ -221,17 +222,84 @@ h5{
 li{
     list-style: none;
 }
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: gainsboro;
+}
+ul{
+    list-style-type: none;
+    background-color:gainsboro;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+ul li ul.dropdown{
+    display: block;
+    background: gainsboro;
+    margin: 2px 0px;
+}
+ul li ul.dropdown{
+    width: auto;
+    background-color: plum;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: peru;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+ul li ul.Dropdown li{
+    display: block;
+    background: #ffff;
+    margin:  2px 0px;
+}
     </style>
 </head>
 <body>
     <div class="container">
+
+        <div class="nav">
+            <ul>
+                <li><a style="margin-right: 200px; font-size: 30px;" href="vaseb.html">Vasab</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="catagories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blogs.html">pages <i style="font-size: 13px;" class="fa-solid fa-chevron-up"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="faq.html">FAQ's</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+                <i style="margin-left: 50px; cursor: pointer;" class="fa-solid fa-magnifying-glass"></i>
+                <i style="margin: 10px; cursor: pointer;" class="fa-solid fa-user"></i>
+                <li><a href="login.html">CART(0)</a></li>
+            </ul>
+        </div>
+    </div>
     <span class="material-symbols-outlined">chair</span>
     <h4>Our Blogs</h4>
     <p>News & Articles</p>
-    </div>
+   
 <div class="content">
      <div class="img">
-    <img src="images/c image10.jpg" height="450px" width="638px">
+    <img src="images/pic2.a" height="450px" width="638px">
     </div>
     <div class="cont">
        <h4>Jun 22, 2024</h4>
@@ -248,7 +316,7 @@ li{
 <div class="z">
     <div class="nav">
         <div class="sup">
-            <img src="images/c image8.jpg" height="260px "  width="210px">
+            <img src="images/pic2.b.jpg" height="260px "  width="210px">
             <div class="sup1">
                 <h2>Living exploring the world of<br>
                      modular furniture for modern homes</h2>
@@ -261,7 +329,7 @@ li{
     </div>
     <div class="nav1">
         <div class="sup4">
-            <img src="images/c image11.jpg" height="260px "  width="210px">
+            <img src="images/pic2.jpg" height="260px "  width="210px">
             <div class="sup5">
                 <h2>Smart homes integrating<br>
                     technology with modern decor</h2>
@@ -276,7 +344,7 @@ li{
 <div class="z">
     <div class="nav">
         <div class="sup">
-            <img src="images/c image12.jpg" height="260px "  width="210px">
+            <img src="images/furniture 1.jpg" height="260px "  width="210px">
             <div class="sup1">
                 <h2>Stylish sustainability the intersection<br>
                      of fashion and eco-consciousness</h2>
@@ -289,7 +357,7 @@ li{
     </div>
     <div class="nav1">
         <div class="sup4">
-            <img src="images/c image13.jpg" height="260px "  width="210px">
+            <img src="images/twin loft.jpg" height="260px "  width="210px">
             <div class="sup5">
                 <h2>The art of mix and match combining<br>
                      different decor styles</h2>
@@ -306,7 +374,7 @@ li{
 <div class="z">
     <div class="nav">
         <div class="sup">
-            <img src="images/c image14.jpg" height="260px "  width="210px">
+            <img src="images/table.jpg" height="260px "  width="210px">
             <div class="sup1">
                 <h2>Setting up your home office modern<br>
                      furniture and decor tips</h2>
@@ -319,7 +387,7 @@ li{
     </div>
     <div class="nav1">
         <div class="sup4">
-            <img src="images/c image15.jpg" height="260px "  width="210px">
+            <img src="images/study desk.jpg" height="260px "  width="210px">
             <div class="sup5">
                 <h2>Maximizing small spaces furniture<br>
                      and decor ideas</h2>
@@ -337,7 +405,7 @@ li{
         <h3>Dive into curated collection of contemporaray furniture and decor,<br>
             meticulousiy designed to elevate your liveng spaces.
         </h3>
-        <video src="images/c video.mp4" height="150" width="200" controls></video>
+        <video src="vedio/3555398-hd_1920_1080_30fps.mp4" height="150" width="200" controls></video>
         <h3>watch the video</h3>
      </div>
 
@@ -347,13 +415,13 @@ li{
             <div class="footer-col">
               <h5>COMPANY</h5>
               <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Shops</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Stores</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="shop.html">Shops</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
               </ul>
             </div>
              <div class="footer-col">
@@ -371,9 +439,9 @@ li{
               <h5>CONNECTED</h5>
               <ul>
                 <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i>Instagram</a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i>Instagram</a></li>
-                <li><a href="#"><i class="fa-brands fa-x-twitter"></i>Instagram</a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a></li>
               </ul>
             </div>
           <div class="footer-col">
@@ -390,6 +458,7 @@ li{
         </div>
         </div>
       </footer>
+    
     
 </body>
 </html>

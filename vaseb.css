@@ -79,6 +79,7 @@ p{
     width: 100%;
     background-image: url(images/vesab.jpg);
     background-size: cover;
+    transition: all 1s;
 }
 .btn{
     height: 50px;
@@ -106,6 +107,7 @@ button{
     height: 500px;
     width: 100%;
     background-color: whitesmoke;
+    transition: all 1s;
 }
 .pic{
     height: 200px;
@@ -307,8 +309,11 @@ body {
     width: 100%;
     background-color: grey; 
     margin-top: 5000px;
-    background-image: url(images/furniture.jpg);
+    background-image: url(images/furniture\ 1.jpg);
     background-size: cover;
+}
+r-col h5{
+    font-size: 18px;
 }
 .section5 video{
     text-align: center;
@@ -338,6 +343,46 @@ body {
 }
 .footer-col h5{
     font-size: 18px;
+}
+ul li a{
+   text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.footer{
+    height: 500px;
+    width: 100%;
+    background-color: gainsboro;
+    margin-top:100px;
+}
+.content{
+    max-width: 100%;
+    margin: auto;
+}
+.row{
+    display: flex;
+}
+.footer{
+    padding: 50px 0;
+}
+.footer-col{
+    width:25%;
+    padding: 0 15px;
+    text-align: center;
+    font-size:20px;
+}
+.footer li{
+    margin-left:70px;
+}
+h5{
+    margin-left:100px;
+}
+.footer-col h5{
+    font-size: 18px;
+}
+li{
+    list-style-type: none;
 }
 
 
